@@ -1,0 +1,192 @@
+<html>
+<head>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, verdana;
+    font-size: 14px;
+  }
+  .layout-app {
+    margin: 0 auto 0 auto;
+    width: 400px;
+    height: 700px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    height: 50px;
+    background: #999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .subheader {
+    height: 30px;
+    background: #ccc;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    position: relative;
+    overflow: hidden;
+  }
+  .loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: rgba(240,240,240,0.8);
+    font-weight: bold;
+  }
+  .body {
+    overflow-y: scroll;
+    height: 100%;
+    padding: 25px;    
+  }
+  
+  
+  .body div:nth-child(odd) {
+      background: #ddd;
+  }
+    
+  .contentBlock {
+    width: 150px;
+    height: 40px;
+    padding: 20px;
+    background: #aaa;
+    margin: 0 0 20px;
+  }
+  
+  .toggleButton {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 11px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    margin: 0 15px;
+  }
+  
+  </style>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    //do work
+    
+    var loadingElement = document.getElementById('loading');
+    document.getElementById('toggleButton').addEventListener('click', function (event) {
+      console.log('hi');
+      var display = loadingElement.style.display;
+      console.log('display', display);
+      
+      
+      if (loadingElement.style.display != 'none') {
+        loadingElement.style.display = 'none';        
+      }
+      else {
+        loadingElement.style.display = '';        
+      }
+      
+    });
+    
+    document.getElementById('loading').style = '';
+  })
+  </script>
+  
+</head>
+<body>
+  
+  
+  
+  <div class="layout-app">
+    <div class="header">
+      Header <button class="toggleButton" id="toggleButton""">Toggle loading</button>
+    </div>
+    <div class="subheader">
+      Subheader
+    </div>
+    <div class="content">
+    
+      <div id="loading" class="loading">
+        Loading...
+      </div>
+      <div class="body">
+      
+        <div class="contentBlock">
+          Content block
+        </div>
+      
+        <div class="contentBlock">
+          Content block
+        </div>
+                  
+        <div class="contentBlock">
+          Content block
+        </div>
+      
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+
+        <div class="contentBlock">
+          Content block
+        </div>
+        
+                
+      </div>
+    
+    </div>
+
+    
+    
+  </div>
+  
+</body>
+</html>
