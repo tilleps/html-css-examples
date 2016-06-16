@@ -82,14 +82,12 @@
   
   <script>
   document.addEventListener("DOMContentLoaded", function(event) { 
-    //do work
     
     var loadingElement = document.getElementById('loading');
+
     document.getElementById('toggleButton').addEventListener('click', function (event) {
-      console.log('hi');
-      var display = loadingElement.style.display;
-      console.log('display', display);
       
+      var display = loadingElement.style.display;
       
       if (loadingElement.style.display != 'none') {
         loadingElement.style.display = 'none';        
@@ -100,7 +98,6 @@
       
     });
     
-    document.getElementById('loading').style = '';
   })
   </script>
   
@@ -110,17 +107,21 @@
   
   
   <div class="layout-app">
+    
     <div class="header">
       Header <button class="toggleButton" id="toggleButton""">Toggle loading</button>
     </div>
+    
     <div class="subheader">
       Subheader
     </div>
+    
     <div class="content">
     
       <div id="loading" class="loading">
         Loading...
       </div>
+      
       <div class="body">
       
         <div class="contentBlock">
@@ -183,8 +184,6 @@
       </div>
     
     </div>
-
-    
     
   </div>
   
